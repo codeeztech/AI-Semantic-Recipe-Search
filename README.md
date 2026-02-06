@@ -37,3 +37,25 @@ This project demonstrates **semantic search**, **vector similarity**, and **mult
 ```bash
 git clone https://github.com/shahrozkhan63/AI-Semantic-Recipe-Search.git
 cd AI-Semantic-Recipe-Search
+
+## **Usage Example**
+
+Enter meal phrase (blank to exit): italian recipes
+
+OpenAI Search:
+[0.512] Pasta
+[0.498] Risotto
+
+MiniLM Search:
+[0.447] White pasta
+[0.430] Matka pasta
+
+BGE Search:
+[0.656] Pasta delighted
+[0.638] Matka pasta
+
+Final Combined Distinct Results:
+[0.656] Pasta delighted  (From: BGE)
+[0.638] Matka pasta     (From: BGE,MiniLM)
+[0.512] Pasta           (From: OpenAI)
+
