@@ -13,7 +13,9 @@ using Microsoft.Data.SqlClient;
 internal class Program1
 {
     private const string ConnectionString =
-        "Data Source=SQL6032.site4now.net;Initial Catalog=db_aa7f0b_bodbdevelopment;User ID=db_aa7f0b_bodbdevelopment_admin;Password=BOTS@150323!;MultipleActiveResultSets=True;TrustServerCertificate=Yes";
+        "Data Source=YOUR_SERVER_NAME;Initial Catalog=YOUR_DATABASE_NAME;" +
+    "User Id=YOUR_DB_USERNAME;Password=YOUR_DB_PASSWORD;" +
+    "TrustServerCertificate=True;";
 
     private static async Task Main0()
     {
