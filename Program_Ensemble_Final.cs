@@ -19,8 +19,9 @@ namespace AISemanticRecipeSearch
         /* ───────── CONFIG ───────── */
 
         private const string ConnectionString =
-            "Data Source=MIS-SHAHROOZ\\SQLEXPRESS;Initial Catalog=db_aa7f0b_bodbdevelopment;" +
-            "Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True;";
+            "Data Source=YOUR_SERVER_NAME;Initial Catalog=YOUR_DATABASE_NAME;" +
+    "User Id=YOUR_DB_USERNAME;Password=YOUR_DB_PASSWORD;" +
+    "TrustServerCertificate=True;";
 
         private const string OpenAIModel = "text-embedding-3-large";
         private static readonly HttpClient httpClient = new HttpClient();
