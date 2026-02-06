@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BgeEmbedder.cs" />
+    <Compile Remove="Program1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="model\model.onnx" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="AllMiniLmL6V2Sharp" Version="0.0.3" />
+		<PackageReference Include="Microsoft.Data.SQLClient" Version="6.0.2" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.0" />
+		<PackageReference Include="Porter2StemmerStandard" Version="1.1.0" />
+		<PackageReference Include="Tokenizers.HuggingFace" Version="1.0.0" />
+		<!--<PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.22.0" />-->
+		<!--<PackageReference Include="Microsoft.ML.Tokenizers" Version="1.0.2" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="model\bge-small-en-v1.5.onnx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="model\model.onnx">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="model\vocab.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
